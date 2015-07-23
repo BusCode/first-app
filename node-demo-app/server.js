@@ -1,11 +1,5 @@
-var http = require('http');
-var express = require('express')
-, app = express()
-, port = process.env.PORT || 3000;
-
-app.get("/", function(req, res) {
-	res.send("Hellow world");
-});
+var app =  require(__dirname + '/app')
+	, port = process.env.PORT || 3000;
 
 app.listen(port, function() {
 	console.log('Listening on port ', port);
